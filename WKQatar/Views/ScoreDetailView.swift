@@ -10,10 +10,12 @@ struct ScoreDetailView: View {
         Grid {
             GridRow {
                 Text(homeTeam)
+                Text("X")
                 Text(awayTeam)
             }
             GridRow {
                 Text("\(homeScore ?? 0)")
+                Text("-")
                 Text("\(awayScore ?? 0)")
             }
         }

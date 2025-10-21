@@ -11,7 +11,7 @@ class WKDataStore {
     var results: [WKResult] = []
 
     init() {
-        results = load("wkresults.json")
+        results = load("WKResultsQatar.json")
     }
 
     func getAllTeams() -> [String] {
