@@ -2,7 +2,7 @@ import SwiftUI
 
 struct WelcomeView: View {
     @Environment(WKDataStore.self) var store
-    @State private var selectedTeam: String?
+    @State var selectedTeam: String?
 
     var body: some View {
         NavigationStack {
@@ -21,10 +21,8 @@ struct WelcomeView: View {
                         ListStadionView(favoriteTeam: selectedTeam)
                     }
                     .buttonStyle(.borderedProminent)
-                    .padding()
                 }
             }
-            .navigationTitle("WK Qatar 2022")
         }
     }
 }

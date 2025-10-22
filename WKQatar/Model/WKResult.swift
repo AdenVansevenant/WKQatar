@@ -9,11 +9,9 @@ import Foundation
 
 // MARK: - WKResult
 class WKResult: Codable, Hashable {
-    //equitable
     static func == (lhs: WKResult, rhs: WKResult) -> Bool {
         lhs.matchNumber == rhs.matchNumber
     }
-    //hashable
     func hash(into hasher: inout Hasher) {
         hasher.combine(matchNumber)
        

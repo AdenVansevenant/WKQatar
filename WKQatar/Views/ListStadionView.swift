@@ -14,9 +14,9 @@ struct ListStadionView: View {
             }
             .navigationTitle("Stadions")
         } content: {
-            if let loc = selectedLocation {
+            if let loca = selectedLocation {
                 ScoreListView(
-                    matches: store.getMatches(for: loc),
+                    matches: store.getMatches(for: loca),
                     selectedMatch: $selectedMatch,
                     favoriteTeam: favoriteTeam
                 )
