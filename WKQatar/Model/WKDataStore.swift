@@ -15,9 +15,14 @@ class WKDataStore {
     }
 
     func getAllTeams() -> [String] {
-        let teams = results.flatMap { [$0.homeTeam, $0.awayTeam] }
+        let teams = results
+            .filter { $0.group != nil }
+            .flatMap { [$0.homeTeam, $0.awayTeam] }
         return Array(Set(teams)).sorted()
     }
+
+
+
 
     func getAllLocations() -> [String] {
         Array(Set(results.map { $0.location })).sorted()
